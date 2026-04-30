@@ -128,7 +128,7 @@ function buildMap(level) {
   }
 
   // Interior brick patterns (seed-based for consistent feel)
-  const seed = level;
+  let seed = level;
   const rand = (max) => ((seed * 9301 + 49297) * (++seed)) % max;
   const patterns = [
     // pattern: rows of bricks
