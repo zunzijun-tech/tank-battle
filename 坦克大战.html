@@ -809,6 +809,13 @@ updateUI();
 lastTime = performance.now();
 requestAnimationFrame(gameLoop);
 
+// Error catch for debugging
+window.onerror = function(msg, url, line) {
+  overlayTitle.textContent = '⚠ 加载错误';
+  overlayMsg.textContent = msg + ' (第' + line + '行)';
+  overlayTitle.style.color = '#f44';
+  overlay.classList.add('show');
+};
 console.log('🎮 坦克大战已加载！按 ENTER 开始');
 </script>
 </body>
